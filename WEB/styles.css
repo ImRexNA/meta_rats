@@ -1,0 +1,436 @@
+.body {
+    background-color: rgb(15, 15, 15);
+    color: white;
+}
+
+.header {
+    text-align: center;
+}
+
+.main {
+    max-width: 100%;
+    margin: auto;
+}
+
+.buildNameContainer {
+    position: relative;
+    width: 25%;
+    margin: auto;
+}
+
+.buildNameImg {
+    width: 100%;
+}
+
+.buildName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem; /* 20px */
+    width: 99%;
+    height: 60%;
+    color: white;
+}
+
+.classes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.classContainer {
+    width: 4.375rem; /* 70px */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s; /* Add a smooth scaling effect */
+}
+
+.classImgContainer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.classContainer:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.classImgContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.className {
+    margin-top: 0.3125rem; /* 5px */
+    font-size: 1rem; /* 16px */
+}
+
+.classHover {
+    opacity: 0;
+}
+
+.classHover:hover,
+.classContainer.selected .classHover {
+    opacity: 1;
+}
+
+.classContainer.selected .border {
+    opacity: 0;
+}
+
+.inventoryContainer {
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url(img/inventory/inventoryFrame.webp);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3.125rem; /* 50px */
+}
+
+.inventoryColumns { 
+    margin: 0.625rem; /* 10px */
+    padding: 1.25rem; /* 20px */
+    width: 25rem; /* 400px */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 31.25rem; /* 500px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay-image {
+    position: absolute;
+    width: 25%;
+    height: auto; /* Keep the aspect ratio */
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+}
+
+.portrait {
+    width: 100%;
+    height: auto;
+    max-width: 18.75rem; /* 300px */
+    max-height: 18.75rem; /* 300px */
+    object-fit: contain;
+}
+
+.perk-1, .perk-2, .perk-3, .perk-4, .skill-1, .skill-2, .weapon-1-primary, .weapon-1-secondary, .weapon-2-primary, .weapon-2-secondary, .utility-1, .utility-, .utility-3, .utility-4, .utility-5, .utility-6, .head, .neck, .back, .chest, .hands, .ring-1, .ring-2, .legs, .feet {
+    cursor: pointer;
+}
+
+.perk-1-outline {
+    top: 40%;
+    left: -1.4rem; /* -5.5px */
+}
+
+.perk-1 {
+    top: 42%;
+    left: -0.8rem; /* -5.5px */
+    width: 20%;
+}
+
+.perk-2 {
+    top: 40%;
+    right: -1.4rem; /* -5.5px */
+}
+
+.perk-3 {
+    top: 64%;
+    left: -1.4rem; /* -5.5px */
+}
+
+.perk-4 {
+    top: 64%;
+    right: -1.4rem; /* -5.5px */
+}
+
+.skill-1 {
+    bottom: -2rem; /* -5.5px */
+    left: -1.4rem; /* -5.5px */
+}
+
+.skill-2 {
+    bottom: -2rem; /* -5.5px */
+    right: -1.4rem; /* -5.5px */
+}
+
+.classTable {
+    margin-top: 2rem; /* 20px */
+    width: 100%;
+    border-collapse: collapse; /* Combine table borders */
+}
+
+.classTable tr {
+    display: flex; /* Maintain the flex layout */
+    justify-content: space-between;
+}
+
+.classTable td {
+    text-align: left; /* Align text to the left */
+}
+
+.container2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 6rem;
+    justify-content: center;
+}
+
+/* Specific positions for each image using top, left, right, bottom */
+.background-shadow {
+    width: 489px;
+    height: 542px;
+}
+
+.background-left {
+    height: 522px;
+    width: 203px;
+    left: 0rem;
+}
+
+.background-right {
+    height: 522px;
+    width: 203px;
+    right: 0rem;
+    transform: scaleX(-1);
+}
+
+.weapon-1 {
+    width: 148px;
+    height: 200px;
+    top: 0rem;
+    left: -5rem;
+}
+
+.weapon-1-primary {
+    width: 65px;
+    height: 165px;
+    top: 1.7rem;
+    left: -4.5rem;
+}
+
+.weapon-1-secondary {
+    width: 65px;
+    height: 165px;
+    top: 1.7rem;
+    left: -0.3rem;
+}
+
+.weapon-2 {
+    width: 148px;
+    height: 200px;
+    top: 0rem; /* 100px */
+    right: -5rem; /* 20px */
+}
+
+.weapon-2-primary {
+    width: 65px;
+    height: 165px;
+    top: 1.7rem;
+    right: -4.5rem;/
+}
+
+.weapon-2-secondary {
+    width: 65px;
+    height: 165px;
+    top: 1.7rem;
+    right: -0.3rem;
+}
+
+.utility-1-background {
+    width: 74px;
+    height: 300px;
+    top: 13.9rem;
+    left: -5rem;
+}
+
+.utility-1 {
+    width: 58px;
+    top: 20.3rem;
+    left: -4.5rem;
+}
+
+.utility-2 {
+    width: 58px;
+    top: 24.4rem;
+    left: -4.5rem;
+}
+
+.utility-3 {
+    width: 58px;
+    top: 28.5rem;
+    left: -4.5rem;
+}
+
+.utility-2-background {
+    width: 74px;
+    height: 300px;
+    top: 13.9rem;
+    right: -5rem;
+}
+
+.utility-4 {
+    width: 58px;
+    top: 20.3rem;
+    right: -4.5rem;
+}
+
+.utility-5 {
+    width: 58px;
+    top: 24.4rem;
+    right: -4.5rem;
+}
+
+.utility-6 {
+    width: 58px;
+    top: 28.5rem;
+    right: -4.5rem;
+}
+
+.head {
+    width: 5.625rem; /* 90px */
+    top: 3rem;
+}
+
+.neck {
+    width: 3.75rem; /* 60px */
+    top: 5rem;
+    right: 5rem; /* 17% */
+}
+
+.back {
+    width: 5.625rem; /* 90px */
+    top: 12.81rem;
+    right: 3rem; /* 4% */
+}
+
+.chest {
+    width: 6.875rem; /* 110px */
+    height: 9.375rem; /* 150px */
+    top: 9rem;
+}
+
+.hands {
+    width: 5.625rem; /* 90px */
+    top: 12.81rem;
+    left: 3rem; /* 4% */
+}
+
+.ring-1 {
+    width: 3.75rem; /* 60px */
+    top: 19rem;
+    left: 5rem; /* 13% */
+}
+
+.ring-2 {
+    width: 3.75rem; /* 60px */
+    top: 19rem;
+    right: 5rem; /* 13% */
+}
+
+.legs {
+    width: 6.875rem; /* 110px */
+    height: 9.375rem; /* 150px */
+    top: 19rem;
+}
+
+.feet {
+    width: 5.625rem; /* 90px */
+    top: 23rem;
+    right: 3rem; /* 4% */
+}
+
+.invisible {
+    visibility: visible;
+}
+
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.p-2 { padding: 2rem; }
+
+
+@media (max-width: 768px) {
+    .classContainer {
+        width: 25%; /* Adjust size for smaller screens */
+    }
+    
+    .inventoryColumns {
+        width: 100%; /* Make inventory full width on smaller screens */
+    }
+}
+
+
+
+
+/* Styles for Pop-out Menu */
+.perk-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+    
+}
+
+.perk-menu img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.perk-option {
+   text-align: center;
+   border: 1px solid white;
+   border-radius: 10%;
+   padding: 5px;
+}
+
+.perkName {
+    font-size: 0.7rem; /* 16px */
+    
+}
+
+
+
+
+
+
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+

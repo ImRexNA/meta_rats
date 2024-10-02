@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Dark and Darker Builds</title>
+</head>
+<body class="body">
+    <header class="header">
+        <div>Dark and Darker</div>
+        <div>Builds</div>
+    </header>
+    <main class="main">
+        <!-- Name Build -->
+        <div class="buildNameContainer">
+            <img class="buildNameImg" src="img/buildNameFrame.webp" alt="Build Name Frame">
+            <input class="buildName" placeholder="*Build Name*" aria-label="Build Name">
+        </div>
+
+        <!-- Class Selector -->
+        <div class="classes">
+            <div class="classContainer" data-class="barbarian">
+                <div class="classImgContainer">
+                    <img class="classImg profile" src="img/profile/barbarian.png" alt="Barbarian">
+                    <img class="classFrame border" src="img/profile/profileFrame.webp" alt="Profile Frame">
+                    <img class="classHover selected" src="img/profile/hoverFrame.webp" alt="Hover Frame">
+                </div>
+                <div class="className">Barbarian</div>
+            </div>
+            <div class="classContainer" data-class="bard">
+                <div class="classImgContainer">
+                    <img class="classImg profile" src="img/profile/bard.png" alt="Bard">
+                    <img class="classFrame border" src="img/profile/profileFrame.webp" alt="Profile Frame">
+                    <img class="classHover selected" src="img/profile/hoverFrame.webp" alt="Hover Frame">
+                </div>
+                <div class="className">Bard</div>
+            </div>
+            <div class="classContainer" data-class="cleric">
+                <div class="classImgContainer">
+                    <img class="classImg profile" src="img/profile/cleric.png" alt="Cleric">
+                    <img class="classFrame border" src="img/profile/profileFrame.webp" alt="Profile Frame">
+                    <img class="classHover selected" src="img/profile/hoverFrame.webp" alt="Hover Frame">
+                </div>
+                <div class="className">Cleric</div>
+            </div>
+            <div class="classContainer" data-class="druid">
+                <div class="classImgContainer">
+                    <img class="classImg profile" src="img/profile/druid.png" alt="Druid">
+                    <img class="classFrame border" src="img/profile/profileFrame.webp" alt="Profile Frame">
+                    <img class="classHover selected" src="img/profile/hoverFrame.webp" alt="Hover Frame">
+                </div>
+                <div class="className">Druid</div>
+            </div>
+            <div class="classContainer" data-class="fighter">
+                <div class="classImgContainer">
+                    <img class="classImg profile" src="img/profile/fighter.png" alt="Fighter">
+                    <img class="classFrame border" src="img/profile/profileFrame.webp" alt="Profile Frame">
+                    <img class="classHover selected" src="img/profile/hoverFrame.webp" alt="Hover Frame">
+                </div>
+                <div class="className">Fighter</div>
+            </div>
+            <div class="classContainer" data-class="ranger">
+                <div class="classImgContainer">
+                    <img class="classImg profile" src="img/profile/ranger.png" alt="Ranger">
+                    <img class="classFrame border" src="img/profile/profileFrame.webp" alt="Profile Frame">
+                    <img class="classHover selected" src="img/profile/hoverFrame.webp" alt="Hover Frame">
+                </div>
+                <div class="className">Ranger</div>
+            </div>
+            <div class="classContainer" data-class="rogue">
+                <div class="classImgContainer">
+                    <img class="classImg profile" src="img/profile/rogue.png" alt="Rogue">
+                    <img class="classFrame border" src="img/profile/profileFrame.webp" alt="Profile Frame">
+                    <img class="classHover selected" src="img/profile/hoverFrame.webp" alt="Hover Frame">
+                </div>
+                <div class="className">Rogue</div>
+            </div>
+            <div class="classContainer" data-class="warlock">
+                <div class="classImgContainer">
+                    <img class="classImg profile" src="img/profile/warlock.png" alt="Warlock">
+                    <img class="classFrame border" src="img/profile/profileFrame.webp" alt="Profile Frame">
+                    <img class="classHover selected" src="img/profile/hoverFrame.webp" alt="Hover Frame">
+                </div>
+                <div class="className">Warlock</div>
+            </div>
+            <div class="classContainer" data-class="wizard">
+                <div class="classImgContainer">
+                    <img class="classImg profile" src="img/profile/wizard.png" alt="Wizard">
+                    <img class="classFrame border" src="img/profile/profileFrame.webp" alt="Profile Frame">
+                    <img class="classHover selected" src="img/profile/hoverFrame.webp" alt="Hover Frame">
+                </div>
+                <div class="className">Wizard</div>
+            </div>
+        </div>
+
+        <!-- Character Stats & Inventory -->
+        <div class="inventoryContainer">
+            <div class="inventoryColumns">
+                <div class="container">
+                    <img class="overlay-image background" src="img/inventory/characterFrame.webp" alt="Character Frame">
+                    <img class="overlay-image portrait" src="img/portrait/barbarianPortrait.png" alt="Barbarian Portrait">
+                    <img class="overlay-image perk-1-outline" src="img/inventory/perkSlot.webp" alt="Perk Slot Outline">
+                    <img class="overlay-image perk-1" src="img/inventory/perkSlot.webp" data-perk-slot="1" alt="Perk Slot 1">
+                    <img class="overlay-image perk-2" src="img/inventory/perkSlot.webp" data-perk-slot="2" alt="Perk Slot 2">
+                    <img class="overlay-image perk-3" src="img/inventory/perkSlot.webp" data-perk-slot="3" alt="Perk Slot 3">
+                    <img class="overlay-image perk-4" src="img/inventory/perkSlot.webp" data-perk-slot="4" alt="Perk Slot 4">
+                    <img class="overlay-image skill-1" src="img/inventory/skillSlot.webp" alt="Skill Slot 1">
+                    <img class="overlay-image skill-2" src="img/inventory/skillSlot.webp" alt="Skill Slot 2">
+
+                    <div class="perk-menu hidden">
+                        <div class="perk-option" data-perk="none" data-class="all">
+                            <img src="img/inventory/perkSlot.webp" alt="No Perk">
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Axe_Specialization" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Axe_Specialization.png" alt="Perk Axe Specialization">
+                            <div class="perkName">Axe Specialization</div>
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Berserker" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Berserker.png" alt="Perk Berserker">
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Carnage" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Carnage.png" alt="Perk Carnage">
+                        </div>
+                    </div>
+                </div>
+                <table id="classTable" class="classTable">
+                    <tbody>
+                        <!-- Table rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="inventoryColumns">
+                <div class="container2">
+                    <img class="overlay-image background-shadow" src="img/equip/inventoryShadow.webp" alt="Background Shadow">
+                    <img class="overlay-image background-left" src="img/equip/inventoryBackground.webp" alt="Background Left">
+                    <img class="overlay-image background-right" src="img/equip/inventoryBackground.webp" alt="Background Right">
+                    <img class="overlay-image weapon-1" src="img/equip/weapons.webp" alt="Weapon 1">
+                    <img class="overlay-image weapon-1-primary invisible" src="" alt="Weapon 1 Primary">
+                    <img class="overlay-image weapon-1-secondary invisible" src="" alt="Weapon 1 Secondary">
+                    <img class="overlay-image weapon-2" src="img/equip/weapons.webp" alt="Weapon 2">
+                    <img class="overlay-image weapon-2-primary invisible" src="" alt="Weapon 2 Primary">
+                    <img class="overlay-image weapon-2-secondary invisible" src="" alt="Weapon 2 Secondary">
+                    <img class="overlay-image utility-1-background" src="img/equip/utility.webp" alt="Utility 1 Background">
+                    <img class="overlay-image utility-1 invisible" src="" alt="Utility 1">
+                    <img class="overlay-image utility-2 invisible" src="" alt="Utility 2">
+                    <img class="overlay-image utility-3 invisible" src="" alt="Utility 3">
+                    <img class="overlay-image utility-2-background" src="img/equip/utility.webp" alt="Utility 2 Background">
+                    <img class="overlay-image utility-4 invisible" src="" alt="Utility 4">
+                    <img class="overlay-image utility-5 invisible" src="" alt="Utility 5">
+                    <img class="overlay-image utility-6 invisible" src="" alt="Utility 6">
+                    <img class="overlay-image head" src="img/equip/armorHeadHandsFeetBack.webp" alt="Head">
+                    <img class="overlay-image neck" src="img/equip/accNeckRing.webp" alt="Neck">
+                    <img class="overlay-image back" src="img/equip/armorHeadHandsFeetBack.webp" alt="Back">
+                    <img class="overlay-image chest" src="img/equip/armorChestLegs.webp" alt="Chest">
+                    <img class="overlay-image hands" src="img/equip/armorHeadHandsFeetBack.webp" alt="Hands">
+                    <img class="overlay-image ring-1" src="img/equip/accNeckRing.webp" alt="Ring 1">
+                    <img class="overlay-image ring-2" src="img/equip/accNeckRing.webp" alt="Ring 2">
+                    <img class="overlay-image legs" src="img/equip/armorChestLegs.webp" alt="Legs">
+                    <img class="overlay-image feet" src="img/equip/armorHeadHandsFeetBack.webp" alt="Feet">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>
