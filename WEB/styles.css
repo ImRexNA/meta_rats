@@ -136,29 +136,47 @@
 }
 
 .perk-1-outline {
-    top: 40%;
+    top: 42%;
     left: -1.4rem; /* -5.5px */
 }
 
+.perk-2-outline {
+    top: 40%;
+    right: -1.4rem; /* -5.5px */
+}
+
+.perk-3-outline {
+    top: 64%;
+    left: -1.4rem; /* -5.5px */
+}
+
+.perk-4-outline {
+    top: 64%;
+    right: -1.4rem; /* -5.5px */
+}
+
 .perk-1 {
-    top: 42%;
-    left: -0.8rem; /* -5.5px */
+    top: 44%;
+    left: -0.75rem; /* -5.5px */
     width: 20%;
 }
 
 .perk-2 {
-    top: 40%;
-    right: -1.4rem; /* -5.5px */
+    top: 42%;
+    right: -0.75rem; /* -5.5px */
+    width: 20%;
 }
 
 .perk-3 {
-    top: 64%;
-    left: -1.4rem; /* -5.5px */
+    top: 66%;
+    left: -0.75rem; /* -5.5px */
+    width: 20%;
 }
 
 .perk-4 {
-    top: 64%;
-    right: -1.4rem; /* -5.5px */
+    top: 66%;
+    right: -0.75rem; /* -5.5px */
+    width: 20%;
 }
 
 .skill-1 {
@@ -415,7 +433,9 @@
 }
 
 
-
+.perkDescription {
+    display: none;
+}
 
 
 

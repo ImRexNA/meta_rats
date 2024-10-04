@@ -102,6 +102,9 @@
                     <img class="overlay-image background" src="img/inventory/characterFrame.webp" alt="Character Frame">
                     <img class="overlay-image portrait" src="img/portrait/barbarianPortrait.png" alt="Barbarian Portrait">
                     <img class="overlay-image perk-1-outline" src="img/inventory/perkSlot.webp" alt="Perk Slot Outline">
+                    <img class="overlay-image perk-2-outline" src="img/inventory/perkSlot.webp" alt="Perk Slot Outline">
+                    <img class="overlay-image perk-3-outline" src="img/inventory/perkSlot.webp" alt="Perk Slot Outline">
+                    <img class="overlay-image perk-4-outline" src="img/inventory/perkSlot.webp" alt="Perk Slot Outline">
                     <img class="overlay-image perk-1" src="img/inventory/perkSlot.webp" data-perk-slot="1" alt="Perk Slot 1">
                     <img class="overlay-image perk-2" src="img/inventory/perkSlot.webp" data-perk-slot="2" alt="Perk Slot 2">
                     <img class="overlay-image perk-3" src="img/inventory/perkSlot.webp" data-perk-slot="3" alt="Perk Slot 3">
@@ -110,19 +113,71 @@
                     <img class="overlay-image skill-2" src="img/inventory/skillSlot.webp" alt="Skill Slot 2">
 
                     <div class="perk-menu hidden">
+                        <!-- Barbarian Perks -->
                         <div class="perk-option" data-perk="none" data-class="all">
                             <img src="img/inventory/perkSlot.webp" alt="No Perk">
                         </div>
                         <div class="perk-option" data-perk="144px-Perk_Axe_Specialization" data-class="barbarian">
                             <img src="img/perks/barbarian/144px-Perk_Axe_Specialization.png" alt="Perk Axe Specialization">
                             <div class="perkName">Axe Specialization</div>
+                            <div class="perkDescription">While using axes, gain 3 Physical Buff Weapon Damage.</div>
                         </div>
                         <div class="perk-option" data-perk="144px-Perk_Berserker" data-class="barbarian">
                             <img src="img/perks/barbarian/144px-Perk_Berserker.png" alt="Perk Berserker">
+                            <div class="perkName">Berserker</div>
+                            <div class="perkDescription">Gain 0 to 33.3% Physical Power Bonus when missing 0% to 100% of your max health.</div>
                         </div>
                         <div class="perk-option" data-perk="144px-Perk_Carnage" data-class="barbarian">
                             <img src="img/perks/barbarian/144px-Perk_Carnage.png" alt="Perk Carnage">
+                            <div class="perkName">Carnage</div>
+                            <div class="perkDescription">When a target is killed, gain 75 Armor Rating for 7s.</div>
                         </div>
+                        <div class="perk-option" data-perk="144px-Perk_Executioner" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Executioner.png" alt="Perk Executioner">
+                            <div class="perkName">Executioner</div>
+                            <div class="perkDescription">While using axes, gain 10% Physical Headshot Hit Location Bonus.</div>
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Iron_Will" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Iron_Will.png" alt="Perk Iron Will">
+                            <div class="perkName">Iron Will</div>
+                            <div class="perkDescription">Gain 60 Magical Resistance and immunity to knockback effects.</div>
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Morale_Boost" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Morale_Boost.png" alt="Perk Morale Boost">
+                            <div class="perkName">Morale Boost</div>
+                            <div class="perkDescription">Receive 12% Percent Max Health Healing after killing a player.</div>
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Potion_Chugger" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Potion_Chugger.png" alt="Perk Potion Chugger">
+                            <div class="perkName">Potion Chugger</div>
+                            <div class="perkDescription">Gain 1.2x healing and 1.2x shielding potency from all drinks, while reducing the duration to 0.5x the base amount.</div>
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Savage" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Savage.png" alt="Perk Savage">
+                            <div class="perkName">Savage</div>
+                            <div class="perkDescription">While not wearing any chest armor, gain 10% Physical Power Bonus.</div>
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Smash" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Smash.png" alt="Perk Smash">
+                            <div class="perkName">Smash</div>
+                            <div class="perkDescription">Gain the ability to destroy unreinforced doors and containers. Also gain 1 Impact Power on your attacks with two-handed weapons to defeat blocks and parries better.</div>
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Toughness" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Toughness.png" alt="Perk Toughness">
+                            <div class="perkName">Toughness</div>
+                            <div class="perkDescription">Gain 15% Max Health Bonus.</div>
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Treacherous_Lungs" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Treacherous_Lungs.png" alt="Perk Treacherous Lungs">
+                            <div class="perkName">Treacherous Lungs</div>
+                            <div class="perkDescription">Increases the duration of all shouting abilities (War Cry, Rage, Savage Roar) to 1.3x of the base amount.</div>
+                        </div>
+                        <div class="perk-option" data-perk="144px-Perk_Two_Handed_Weapon_Expert" data-class="barbarian">
+                            <img src="img/perks/barbarian/144px-Perk_Two_Handed_Weapon_Expert.png" alt="Perk Two Handed Weapon Expert">
+                            <div class="perkName">Two-Handed Weapon Expert</div>
+                            <div class="perkDescription">When attacking with a two-handed weapon, gain 5% Physical Power Bonus.</div>
+                        </div>
+
                     </div>
                 </div>
                 <table id="classTable" class="classTable">
