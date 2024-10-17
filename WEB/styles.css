@@ -179,14 +179,26 @@
     width: 20%;
 }
 
-.skill-1 {
+.skill-1-outline {
     bottom: -2rem; /* -5.5px */
     left: -1.4rem; /* -5.5px */
 }
 
-.skill-2 {
+.skill-2-outline {
     bottom: -2rem; /* -5.5px */
     right: -1.4rem; /* -5.5px */
+}
+
+.skill-1 {
+    bottom: -1.4rem; /* -5.5px */
+    left: -0.75rem; /* -5.5px */
+    width: 20%;
+}
+
+.skill-2 {
+    bottom: -1.4rem; /* -5.5px */
+    right: -0.75rem; /* -5.5px */
+    width: 20%;
 }
 
 .classTable {
@@ -399,43 +411,7 @@
 
 
 
-/* Styles for Pop-out Menu */
-.perk-menu {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    gap: 10px;
-    z-index: 9999;
-    
-}
 
-.perk-menu img {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.perk-option {
-   text-align: center;
-   border: 1px solid white;
-   border-radius: 10%;
-   padding: 5px;
-}
-
-.perkName {
-    font-size: 0.7rem; /* 16px */
-    
-}
-
-
-.perkDescription {
-    display: none;
-}
 
 
 
@@ -451,6 +427,99 @@
 
 
 
+/* Styles for Pop-out Menu */
+.perk-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Keep same background color as perk menu */
+    padding: 20px; /* Add padding to the menu */
+    border-radius: 8px; /* Match border radius with perk menu */
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
 
+.perk-menu img {
+    width: 50px; /* Consistent size for perk images */
+    height: 50px; /* Maintain aspect ratio */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.perk-option {
+    text-align: center; /* Center align text */
+    border: 1px solid white; /* White border for each option */
+    border-radius: 10%; /* Rounded corners */
+    padding: 5px; /* Padding for each option */
+}
+
+.perkName {
+    font-size: 0.7rem; /* Font size for perk names */
+}
+
+.perkDescription {
+    display: none; /* Hide description initially */
+}
+
+/* General styles for skill menu */
+.skill-menu {
+    position: absolute; /* Position relative to the parent */
+    top: 50%; /* Center the menu vertically */
+    left: 50%; /* Center the menu horizontally */
+    transform: translate(-50%, -50%); /* Align center */
+    background-color: rgba(0, 0, 0, 0.9); /* Same background as perk menu */
+    padding: 20px; /* Same padding as perk menu */
+    border-radius: 8px; /* Same border radius as perk menu */
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Arrange options in a column */
+    gap: 10px; /* Space between options */
+    z-index: 9999; /* Ensure the menu is on top */
+}
+
+/* Show skill menu when active */
+.skill-menu:not(.hidden) {
+    display: flex; /* Show menu as flex when not hidden */
+}
+
+/* Style for each skill option */
+.skill-option {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 1px solid white; /* White border for skill options */
+    border-radius: 10%; /* Rounded corners */
+    padding: 5px; /* Padding around each option */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    text-align: center; /* Center align text */
+}
+
+/* Change background color on hover */
+.skill-option:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on hover */
+}
+
+/* Style for skill images */
+.skill-option img {
+    width: 50px; /* Set a consistent size for skill images */
+    height: 50px; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+}
+
+/* Style for skill names */
+.skillName {
+    font-weight: bold; /* Bold text for names */
+}
+
+/* Style for skill descriptions */
+.skillDescription {
+    font-size: 0.7rem; /* Same font size as perk names */
+    color: #ffffff; /* White color for descriptions */
+}
+
+/* Optional: Hide the menu when clicking outside */
+.hidden {
+    display: none; /* Ensures the menu is not displayed */
+}
 
 

@@ -3,14 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const classTableBody = document.querySelector('#classTable tbody');
     const portraitImage = document.querySelector('.overlay-image.portrait');
     const perkMenu = document.createElement('div');
+    const skillMenu = document.createElement('div'); // Create skill menu
     perkMenu.classList.add('perk-menu', 'hidden');
+    skillMenu.classList.add('skill-menu', 'hidden'); // Add class for skill menu
     document.body.appendChild(perkMenu);
+    document.body.appendChild(skillMenu); // Append skill menu to body
     const perkSlots = document.querySelectorAll('.overlay-image[data-perk-slot]');
+    const skillSlots = document.querySelectorAll('.overlay-image[data-skill-slot]'); // Skill slots
     let activePerkSlot = null;
+    let activeSkillSlot = null; // For active skill slot
     let selectedClass = 'barbarian'; // Default selected class
 
-    // Set to store selected perks
+    // Set to store selected perks and skills
     const selectedPerks = new Set();
+    const selectedSkills = new Set(); // Track selected skills
 
     // Class data for stats and portraits
     const classData = {
@@ -165,11 +171,42 @@ document.addEventListener('DOMContentLoaded', () => {
         // More perks...
     ];
 
-    // Function to clear selected perks
-    function clearSelectedPerks() {
+    // Skill data structure
+    const skillsData = [
+        {
+            skill: 'none',
+            imgSrc: 'img/inventory/skillSlot.webp',
+            alt: 'No Skill',
+            class: 'all'
+        },
+        {
+            skill: 'fireball',
+            imgSrc: 'img/skills/fireball.png',
+            alt: 'Fireball',
+            class: 'wizard',
+            name: 'Fireball',
+            description: 'Launch a fiery ball that explodes on impact.'
+        },
+        {
+            skill: 'heal',
+            imgSrc: 'img/skills/heal.png',
+            alt: 'Heal',
+            class: 'cleric',
+            name: 'Heal',
+            description: 'Restore health to yourself or an ally.'
+        },
+        // Add more skills as needed
+    ];
+
+    // Function to clear selected perks and skills
+    function clearSelectedPerksAndSkills() {
         selectedPerks.clear(); // Clear the set of selected perks
+        selectedSkills.clear(); // Clear the set of selected skills
         perkSlots.forEach(slot => {
             slot.src = 'img/inventory/perkSlot.webp'; // Reset each perk slot to default
+        });
+        skillSlots.forEach(slot => {
+            slot.src = 'img/inventory/skillSlot.webp'; // Reset each skill slot to default
         });
     }
 
@@ -215,6 +252,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Function to update the visibility of skill options
+    function updateSkillOptions() {
+        const skillOptions = document.querySelectorAll('.skill-option');
+        skillOptions.forEach(option => {
+            const skillClass = option.getAttribute('data-class');
+            if (selectedSkills.has(option.getAttribute('data-skill')) && option.getAttribute('data-skill') !== 'none') {
+                option.style.display = 'none'; // Hide if already selected
+            } else if (skillClass === selectedClass || skillClass === 'all') {
+                option.style.display = ''; // Show valid skills
+            } else {
+                option.style.display = 'none'; // Hide invalid skills
+            }
+        });
+    }
+
     // Function to generate perk options dynamically
     function generatePerkOptions() {
         perkMenu.innerHTML = ''; // Clear existing options
@@ -247,11 +299,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Function to generate skill options dynamically
+    function generateSkillOptions() {
+        skillMenu.innerHTML = ''; // Clear existing options
+        skillsData.forEach(skill => {
+            const skillOption = document.createElement('div');
+            skillOption.classList.add('skill-option');
+            skillOption.setAttribute('data-skill', skill.skill);
+            skillOption.setAttribute('data-class', skill.class);
+
+            const img = document.createElement('img');
+            img.src = skill.imgSrc;
+            img.alt = skill.alt;
+
+            skillOption.appendChild(img);
+
+            if (skill.name && skill.description) {
+                const skillName = document.createElement('div');
+                skillName.classList.add('skillName');
+                skillName.textContent = skill.name;
+
+                const skillDescription = document.createElement('div');
+                skillDescription.classList.add('skillDescription');
+                skillDescription.textContent = skill.description;
+
+                skillOption.appendChild(skillName);
+                skillOption.appendChild(skillDescription);
+            }
+
+            skillMenu.appendChild(skillOption);
+        });
+    }
+
     // Initialize with default class
     document.querySelector('.classContainer[data-class="barbarian"]').click();
 
-    // Generate perks dynamically
+    // Generate perks and skills dynamically
     generatePerkOptions();
+    generateSkillOptions();
 
     // Event listeners for perk slots
     perkSlots.forEach(slot => {
@@ -259,6 +344,15 @@ document.addEventListener('DOMContentLoaded', () => {
             activePerkSlot = slot; // Save clicked perk slot
             perkMenu.classList.remove('hidden'); // Show perk menu
             updatePerkOptions(); // Update options visibility
+        });
+    });
+
+    // Event listeners for skill slots
+    skillSlots.forEach(slot => {
+        slot.addEventListener('click', () => {
+            activeSkillSlot = slot; // Save clicked skill slot
+            skillMenu.classList.remove('hidden'); // Show skill menu
+            updateSkillOptions(); // Update options visibility
         });
     });
 
@@ -274,27 +368,50 @@ document.addEventListener('DOMContentLoaded', () => {
                     activePerkSlot.src = `img/inventory/perkSlot.webp`; // Reset slot
                 } else if (!selectedPerks.has(selectedPerk)) {
                     selectedPerks.delete(activePerkSlot.src.split('/').pop().split('.png')[0]); // Remove old perk
-                    const newImagePath = `img/perks/${selectedClass}/${selectedPerk}.png`;
-                    activePerkSlot.src = newImagePath; // Update with new perk
-                    selectedPerks.add(selectedPerk); // Add new perk
+                    selectedPerks.add(selectedPerk);
+                    activePerkSlot.src = option.querySelector('img').src; // Set new perk
                 }
-
-                updatePerkOptions(); // Refresh perk options
-                perkMenu.classList.add('hidden'); // Hide menu
-            } else {
-                console.error('No active perk slot to update.');
+                updatePerkOptions(); // Update perk options
             }
+
+            perkMenu.classList.add('hidden'); // Hide perk menu
+        }
+
+        // Event listener for skill options
+        if (event.target.closest('.skill-option')) {
+            const option = event.target.closest('.skill-option');
+            const selectedSkill = option.getAttribute('data-skill');
+
+            if (activeSkillSlot) {
+                if (selectedSkill === 'none') {
+                    selectedSkills.delete(activeSkillSlot.src.split('/').pop().split('.png')[0]); // Remove old skill
+                    activeSkillSlot.src = `img/inventory/skillSlot.webp`; // Reset slot
+                } else if (!selectedSkills.has(selectedSkill)) {
+                    selectedSkills.delete(activeSkillSlot.src.split('/').pop().split('.png')[0]); // Remove old skill
+                    selectedSkills.add(selectedSkill);
+                    activeSkillSlot.src = option.querySelector('img').src; // Set new skill
+                }
+                updateSkillOptions(); // Update skill options
+            }
+
+            skillMenu.classList.add('hidden'); // Hide skill menu
+        }
+
+        // Hide menus if clicked outside
+        if (!event.target.closest('.perk-menu') && !event.target.closest('.overlay-image[data-perk-slot]')) {
+            perkMenu.classList.add('hidden');
+        }
+        if (!event.target.closest('.skill-menu') && !event.target.closest('.overlay-image[data-skill-slot]')) {
+            skillMenu.classList.add('hidden');
         }
     });
 
     // Event listeners for class selection
     classOptions.forEach(option => {
         option.addEventListener('click', () => {
-            classOptions.forEach(opt => opt.classList.remove('selected'));
-            option.classList.add('selected');
-            selectedClass = option.getAttribute('data-class'); // Update selected class
-            clearSelectedPerks(); // Clear perks when class changes
-            updateTableAndPortrait(selectedClass); // Refresh display
+            selectedClass = option.getAttribute('data-class');
+            clearSelectedPerksAndSkills(); // Clear previous selections
+            updateTableAndPortrait(selectedClass); // Update table and portrait
         });
     });
 });
