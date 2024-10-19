@@ -181,9 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             skill: 'fireball',
-            imgSrc: 'img/skills/fireball.png',
+            imgSrc: 'img/perks/barbarian/144px-Perk_Axe_Specialization.png',
             alt: 'Fireball',
-            class: 'wizard',
+            class: 'barbarian',
             name: 'Fireball',
             description: 'Launch a fiery ball that explodes on impact.'
         },

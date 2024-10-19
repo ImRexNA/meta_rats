@@ -464,17 +464,16 @@
 
 /* General styles for skill menu */
 .skill-menu {
-    position: absolute; /* Position relative to the parent */
-    top: 50%; /* Center the menu vertically */
-    left: 50%; /* Center the menu horizontally */
-    transform: translate(-50%, -50%); /* Align center */
-    background-color: rgba(0, 0, 0, 0.9); /* Same background as perk menu */
-    padding: 20px; /* Same padding as perk menu */
-    border-radius: 8px; /* Same border radius as perk menu */
-    display: none; /* Initially hidden */
-    flex-direction: column; /* Arrange options in a column */
-    gap: 10px; /* Space between options */
-    z-index: 9999; /* Ensure the menu is on top */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Keep same background color as perk menu */
+    padding: 20px; /* Add padding to the menu */
+    border-radius: 8px; /* Match border radius with perk menu */
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
 }
 
 /* Show skill menu when active */
@@ -501,20 +500,21 @@
 
 /* Style for skill images */
 .skill-option img {
-    width: 50px; /* Set a consistent size for skill images */
+    width: 50px; /* Consistent size for perk images */
     height: 50px; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between image and text */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 /* Style for skill names */
 .skillName {
-    font-weight: bold; /* Bold text for names */
+    font-size: 0.7rem; /* Font size for perk names */
 }
 
 /* Style for skill descriptions */
 .skillDescription {
     font-size: 0.7rem; /* Same font size as perk names */
     color: #ffffff; /* White color for descriptions */
+    display: none; /* Hide description initially */
 }
 
 /* Optional: Hide the menu when clicking outside */
