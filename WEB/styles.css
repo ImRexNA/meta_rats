@@ -5,6 +5,7 @@
 
 .header {
     text-align: center;
+    font-size: 1vw;
 }
 
 .main {
@@ -14,7 +15,7 @@
 
 .buildNameContainer {
     position: relative;
-    width: 25%;
+    width: 25vw;
     margin: auto;
 }
 
@@ -30,7 +31,7 @@
     text-align: center;
     background-color: transparent;
     border: none;
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.04vw; /* 20px */
     width: 99%;
     height: 60%;
     color: white;
@@ -42,10 +43,10 @@
 }
 
 .classContainer {
-    width: 4.375rem; /* 70px */
+    width: 3.65vw; /* 70px */
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s; /* Add a smooth scaling effect */
+    transition: transform 0.2s;
 }
 
 .classImgContainer {
@@ -55,7 +56,7 @@
 }
 
 .classContainer:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
 }
 
 .classImgContainer img {
@@ -68,8 +69,8 @@
 }
 
 .className {
-    margin-top: 0.3125rem; /* 5px */
-    font-size: 1rem; /* 16px */
+    margin-top: 0.26vw; /* 5px */
+    font-size: 0.83vw; /* 16px */
 }
 
 .classHover {
@@ -92,19 +93,19 @@
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 3.125rem; /* 50px */
+    padding: 2.6vw; /* 50px */
 }
 
-.inventoryColumns { 
-    margin: 0.625rem; /* 10px */
-    padding: 1.25rem; /* 20px */
-    width: 25rem; /* 400px */
+.inventoryColumns {
+    margin: 0.52vw; /* 10px */
+    padding: 1.04vw; /* 20px */
+    width: 22vw;
 }
 
 .container {
     position: relative;
     width: 100%;
-    height: 31.25rem; /* 500px */
+    height: 26.04vw; /* 500px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,8 +115,8 @@
 
 .overlay-image {
     position: absolute;
-    width: 25%;
-    height: auto; /* Keep the aspect ratio */
+    width: 5.5vw;
+    height: auto;
 }
 
 .background {
@@ -126,306 +127,337 @@
 .portrait {
     width: 100%;
     height: auto;
-    max-width: 18.75rem; /* 300px */
-    max-height: 18.75rem; /* 300px */
+    max-width: 15.6vw; /* 300px */
+    max-height: 15.6vw; /* 300px */
     object-fit: contain;
 }
 
-.perk-1, .perk-2, .perk-3, .perk-4, .skill-1, .skill-2, .weapon-1-primary, .weapon-1-secondary, .weapon-2-primary, .weapon-2-secondary, .utility-1, .utility-, .utility-3, .utility-4, .utility-5, .utility-6, .head, .neck, .back, .chest, .hands, .ring-1, .ring-2, .legs, .feet {
+.perk-1,
+.perk-2,
+.perk-3,
+.perk-4,
+.skill-1,
+.skill-2,
+.weapon-1-primary,
+.weapon-1-secondary,
+.weapon-2-primary,
+.weapon-2-secondary,
+.utility-1,
+.utility-2,
+.utility-3,
+.utility-4,
+.utility-5,
+.utility-6,
+.head,
+.neck,
+.back,
+.chest,
+.hands,
+.ring-1,
+.ring-2,
+.legs,
+.feet {
     cursor: pointer;
 }
 
 .perk-1-outline {
     top: 42%;
-    left: -1.4rem; /* -5.5px */
+    left: -1.24vw; /* -5.5px */
 }
 
 .perk-2-outline {
     top: 40%;
-    right: -1.4rem; /* -5.5px */
+    right: -1.24vw; /* -5.5px */
 }
 
 .perk-3-outline {
     top: 64%;
-    left: -1.4rem; /* -5.5px */
+    left: -1.24vw; /* -5.5px */
 }
 
 .perk-4-outline {
     top: 64%;
-    right: -1.4rem; /* -5.5px */
+    right: -1.24vw; /* -5.5px */
 }
 
 .perk-1 {
     top: 44%;
-    left: -0.75rem; /* -5.5px */
+    left: -0.7vw; /* -5.5px */
     width: 20%;
 }
 
 .perk-2 {
     top: 42%;
-    right: -0.75rem; /* -5.5px */
+    right: -0.7vw; /* -5.5px */
     width: 20%;
 }
 
 .perk-3 {
     top: 66%;
-    left: -0.75rem; /* -5.5px */
+    left: -0.7vw; /* -5.5px */
     width: 20%;
 }
 
 .perk-4 {
     top: 66%;
-    right: -0.75rem; /* -5.5px */
+    right: -0.7vw; /* -5.5px */
     width: 20%;
 }
 
 .skill-1-outline {
-    bottom: -2rem; /* -5.5px */
-    left: -1.4rem; /* -5.5px */
+    bottom: -1.9vw; /* -20px */
+    left: -1.24vw; /* -5.5px */
 }
 
 .skill-2-outline {
-    bottom: -2rem; /* -5.5px */
-    right: -1.4rem; /* -5.5px */
+    bottom: -1.9vw; /* -20px */
+    right: -1.24vw; /* -5.5px */
 }
 
 .skill-1 {
-    bottom: -1.4rem; /* -5.5px */
-    left: -0.75rem; /* -5.5px */
+    bottom: -1.35vw; /* -5.5px */
+    left: -0.7vw; /* -5.5px */
     width: 20%;
 }
 
 .skill-2 {
-    bottom: -1.4rem; /* -5.5px */
-    right: -0.75rem; /* -5.5px */
+    bottom: -1.35vw; /* -5.5px */
+    right: -0.7vw; /* -5.5px */
     width: 20%;
 }
 
 .classTable {
-    margin-top: 2rem; /* 20px */
+    margin-top: 1.5vw; /* 20px */
     width: 100%;
-    border-collapse: collapse; /* Combine table borders */
+    border-collapse: collapse;
 }
 
 .classTable tr {
-    display: flex; /* Maintain the flex layout */
+    display: flex;
     justify-content: space-between;
 }
 
 .classTable td {
-    text-align: left; /* Align text to the left */
+    text-align: left;
+    font-size: 1vw;
 }
 
 .container2 {
     position: relative;
     display: flex;
     width: 100%;
-    margin-top: 6rem;
     justify-content: center;
 }
 
-/* Specific positions for each image using top, left, right, bottom */
 .background-shadow {
-    width: 489px;
-    height: 542px;
+    width: 25.47vw; /* 489px */
+    height: 28.23vw; /* 542px */
 }
 
 .background-left {
-    height: 522px;
-    width: 203px;
-    left: 0rem;
+    height: 27.19vw; /* 522px */
+    width: 10.57vw; /* 203px */
+    left: 1vw;
 }
 
 .background-right {
-    height: 522px;
-    width: 203px;
-    right: 0rem;
+    height: 27.19vw; /* 522px */
+    width: 10.57vw; /* 203px */
+    right: 1vw;
     transform: scaleX(-1);
 }
 
 .weapon-1 {
-    width: 148px;
-    height: 200px;
-    top: 0rem;
-    left: -5rem;
+    width: 7.71vw; /* 148px */
+    height: 10.42vw; /* 200px */
+    top: 0;
+    left: -3.5vw; /* -5rem */
 }
 
 .weapon-1-primary {
-    width: 65px;
-    height: 165px;
-    top: 1.7rem;
-    left: -4.5rem;
+    width: 3.39vw; /* 65px */
+    height: 8.59vw; /* 165px */
+    top: 0.89vw; /* 1.7rem */
+    left: -2.34vw; /* -4.5rem */
 }
 
 .weapon-1-secondary {
-    width: 65px;
-    height: 165px;
-    top: 1.7rem;
-    left: -0.3rem;
+    width: 3.39vw; /* 65px */
+    height: 8.59vw; /* 165px */
+    top: 0.89vw; /* 1.7rem */
+    left: -0.16vw; /* -0.3rem */
 }
 
 .weapon-2 {
-    width: 148px;
-    height: 200px;
-    top: 0rem; /* 100px */
-    right: -5rem; /* 20px */
+    width: 7.71vw; /* 148px */
+    height: 10.42vw; /* 200px */
+    top: 0;
+    right: -3.5vw; /* -5rem */
 }
 
 .weapon-2-primary {
-    width: 65px;
-    height: 165px;
-    top: 1.7rem;
-    right: -4.5rem;/
+    width: 3.39vw; /* 65px */
+    height: 8.59vw; /* 165px */
+    top: 0.89vw; /* 1.7rem */
+    right: -2.34vw; /* -4.5rem */
 }
 
 .weapon-2-secondary {
-    width: 65px;
-    height: 165px;
-    top: 1.7rem;
-    right: -0.3rem;
+    width: 3.39vw; /* 65px */
+    height: 8.59vw; /* 165px */
+    top: 0.89vw; /* 1.7rem */
+    right: -0.16vw; /* -0.3rem */
 }
 
 .utility-1-background {
-    width: 74px;
-    height: 300px;
-    top: 13.9rem;
-    left: -5rem;
+    width: 3.85vw; /* 74px */
+    height: 15.63vw; /* 300px */
+    top: 11.5vw; /* 13.9rem */
+    left: -3.5vw; /* -5rem */
 }
 
 .utility-1 {
-    width: 58px;
-    top: 20.3rem;
-    left: -4.5rem;
+    width: 3.02vw; /* 58px */
+    top: 10.57vw; /* 20.3rem */
+    left: -2.34vw; /* -4.5rem */
 }
 
 .utility-2 {
-    width: 58px;
-    top: 24.4rem;
-    left: -4.5rem;
+    width: 3.02vw; /* 58px */
+    top: 12.71vw; /* 24.4rem */
+    left: -2.34vw; /* -4.5rem */
 }
 
 .utility-3 {
-    width: 58px;
-    top: 28.5rem;
-    left: -4.5rem;
+    width: 3.02vw; /* 58px */
+    top: 14.84vw; /* 28.5rem */
+    left: -2.34vw; /* -4.5rem */
 }
 
 .utility-2-background {
-    width: 74px;
-    height: 300px;
-    top: 13.9rem;
-    right: -5rem;
+    width: 3.85vw; /* 74px */
+    height: 15.63vw; /* 300px */
+    top: 11.5vw; /* 13.9rem */
+    right: -3.5vw; /* -5rem */
 }
 
-.utility-4 {
-    width: 58px;
-    top: 20.3rem;
-    right: -4.5rem;
+.utility-3-background {
+    width: 3.85vw; /* 74px */
+    height: 15.63vw; /* 300px */
+    top: 7.24vw; /* 13.9rem */
+    right: -2.6vw; /* -5rem */
 }
 
-.utility-5 {
-    width: 58px;
-    top: 24.4rem;
-    right: -4.5rem;
+.utility-4-background {
+    width: 3.85vw; /* 74px */
+    height: 15.63vw; /* 300px */
+    top: 7.24vw; /* 13.9rem */
+    right: -2.6vw; /* -5rem */
+}
+
+.utility-5-background {
+    width: 3.85vw; /* 74px */
+    height: 15.63vw; /* 300px */
+    top: 7.24vw; /* 13.9rem */
+    right: -2.6vw; /* -5rem */
+}
+
+.utility-6-background {
+    width: 3.85vw; /* 74px */
+    height: 15.63vw; /* 300px */
+    top: 7.24vw; /* 13.9rem */
+    right: -2.6vw; /* -5rem */
 }
 
 .utility-6 {
-    width: 58px;
-    top: 28.5rem;
-    right: -4.5rem;
+    width: 3.02vw; /* 58px */
+    top: 14.84vw; /* 28.5rem */
+    right: -2.34vw; /* -4.5rem */
+}
+
+.utility-5 {
+    width: 3.02vw; /* 58px */
+    top: 12.71vw; /* 24.4rem */
+    right: -2.34vw; /* -4.5rem */
+}
+
+.utility-4 {
+    width: 3.02vw; /* 58px */
+    top: 10.57vw; /* 20.3rem */
+    right: -2.34vw; /* -4.5rem */
 }
 
 .head {
-    width: 5.625rem; /* 90px */
-    top: 3rem;
+    width: 4vw; /* 150px */
+    height: 4vw; /* 150px */
+    top: 3vw; /* 100px */
 }
 
 .neck {
-    width: 3.75rem; /* 60px */
-    top: 5rem;
-    right: 5rem; /* 17% */
+    width: 3vw; /* 100px */
+    height: 3vw; /* 100px */
+    top: 4.05vw; /* 260px */
+    right: 5.5vw;
 }
 
 .back {
-    width: 5.625rem; /* 90px */
-    top: 12.81rem;
-    right: 3rem; /* 4% */
+    width: 4vw; /* 160px */
+    height: 4vw; /* 160px */
+    top: 10.5vw; /* 300px */
+    right: 4vw;
 }
 
 .chest {
-    width: 6.875rem; /* 110px */
-    height: 9.375rem; /* 150px */
-    top: 9rem;
+    width: 5vw; /* 140px */
+    height: 7vw; /* 140px */
+    top: 7.5vw; /* 370px */
 }
 
 .hands {
-    width: 5.625rem; /* 90px */
-    top: 12.81rem;
-    left: 3rem; /* 4% */
+    width: 4vw; /* 100px */
+    height: 4vw; /* 100px */
+    top: 10.5vw; /* 480px */
+    left: 4vw;
 }
 
 .ring-1 {
-    width: 3.75rem; /* 60px */
-    top: 19rem;
-    left: 5rem; /* 13% */
+    width: 3vw; /* 100px */
+    height: 3vw; /* 100px */
+    top: 14.95vw; /* 570px */
+    left: 5vw;
 }
 
 .ring-2 {
-    width: 3.75rem; /* 60px */
-    top: 19rem;
-    right: 5rem; /* 13% */
+    width: 3vw; /* 100px */
+    height: 3vw; /* 100px */
+    top: 14.95vw; /* 570px */
+    right: 5vw;
 }
 
 .legs {
-    width: 6.875rem; /* 110px */
-    height: 9.375rem; /* 150px */
-    top: 19rem;
+    width: 5vw; /* 150px */
+    height: 7vw; /* 150px */
+    top: 15vw; /* 650px */
 }
 
 .feet {
-    width: 5.625rem; /* 90px */
-    top: 23rem;
-    right: 3rem; /* 4% */
+    width: 4vw; /* 150px */
+    height: 4vw; /* 150px */
+    top: 18vw; /* 800px */
+    right: 4vw;
 }
 
 .invisible {
     visibility: visible;
 }
 
-
-.mt-1 { margin-top: 1rem; }
-.mt-2 { margin-top: 2rem; }
-.p-2 { padding: 2rem; }
-
-
-@media (max-width: 768px) {
-    .classContainer {
-        width: 25%; /* Adjust size for smaller screens */
-    }
-    
-    .inventoryColumns {
-        width: 100%; /* Make inventory full width on smaller screens */
-    }
-}
-
-
-
-
-
-
-
-
-
+.mt-1 { margin-top: 0.52vw; /* 1rem */ }
+.mt-2 { margin-top: 1.04vw; /* 2rem */ }
+.p-2 { padding: 1.04vw; /* 2rem */ }
 
 .hidden {
     display: none;
 }
-
-
-
-
-
-
 
 /* Styles for Pop-out Menu */
 .perk-menu {
@@ -434,28 +466,28 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.9); /* Keep same background color as perk menu */
-    padding: 20px; /* Add padding to the menu */
-    border-radius: 8px; /* Match border radius with perk menu */
+    padding: 1.04vw; /* 20px */
+    border-radius: 0.42vw; /* 8px */
     display: flex;
-    gap: 10px;
+    gap: 0.52vw; /* 10px */
     z-index: 9999;
 }
 
 .perk-menu img {
-    width: 50px; /* Consistent size for perk images */
-    height: 50px; /* Maintain aspect ratio */
+    width: 5.21vw; /* 100px */
+    height: 5.21vw; /* 100px */
     cursor: pointer; /* Pointer cursor on hover */
 }
 
 .perk-option {
     text-align: center; /* Center align text */
-    border: 1px solid white; /* White border for each option */
-    border-radius: 10%; /* Rounded corners */
-    padding: 5px; /* Padding for each option */
+    border: 0.05vw solid white; /* 1px solid white */
+    border-radius: 5%; /* Rounded corners */
+    padding: 0.26vw; /* 5px */
 }
 
 .perkName {
-    font-size: 0.7rem; /* Font size for perk names */
+    font-size: 0.52vw; /* 1rem */
 }
 
 .perkDescription {
@@ -469,10 +501,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.9); /* Keep same background color as perk menu */
-    padding: 20px; /* Add padding to the menu */
-    border-radius: 8px; /* Match border radius with perk menu */
+    padding: 1.04vw; /* 20px */
+    border-radius: 0.42vw; /* 8px */
     display: flex;
-    gap: 10px;
+    gap: 0.52vw; /* 10px */
     z-index: 9999;
 }
 
@@ -486,9 +518,9 @@
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
     cursor: pointer; /* Change cursor to pointer on hover */
-    border: 1px solid white; /* White border for skill options */
-    border-radius: 10%; /* Rounded corners */
-    padding: 5px; /* Padding around each option */
+    border: 0.05vw solid white; /* 1px solid white */
+    border-radius: 5%; /* Rounded corners */
+    padding: 0.26vw; /* 5px */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
     text-align: center; /* Center align text */
 }
@@ -500,19 +532,19 @@
 
 /* Style for skill images */
 .skill-option img {
-    width: 50px; /* Consistent size for perk images */
-    height: 50px; /* Maintain aspect ratio */
+    width: 2.6vw; /* 50px */
+    height: 2.6vw; /* 50px */
     cursor: pointer; /* Pointer cursor on hover */
 }
 
 /* Style for skill names */
 .skillName {
-    font-size: 0.7rem; /* Font size for perk names */
+    font-size: 0.36vw; /* 0.7rem */
 }
 
 /* Style for skill descriptions */
 .skillDescription {
-    font-size: 0.7rem; /* Same font size as perk names */
+    font-size: 0.36vw; /* 0.7rem */
     color: #ffffff; /* White color for descriptions */
     display: none; /* Hide description initially */
 }
@@ -521,5 +553,3 @@
 .hidden {
     display: none; /* Ensures the menu is not displayed */
 }
-
-
