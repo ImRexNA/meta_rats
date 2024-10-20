@@ -1,4 +1,0 @@
-TODO LIST:
-
-Skill Select is different from Perk Select
-- The skills disappear from list if another is selected entirely.
