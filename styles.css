@@ -158,7 +158,6 @@
 .legs,
 .feet {
     cursor: pointer;
-    border: 2px red solid;
 }
 
 .perk-1-outline {
@@ -515,25 +514,70 @@
 }
 
 .perk-menu img {
-    width: 5.21vw; /* 100px */
-    height: 5.21vw; /* 100px */
+    width: 5vw; /* 100px */
+    height: 5vw; /* 100px */
     cursor: pointer; /* Pointer cursor on hover */
 }
 
+
+
+.perkName {
+    font-size: 0.52vw; /* 1rem */
+}
+
+
+
+/* Container for each perk */
 .perk-option {
+    position: relative; /* Make it a reference point for the pop-out */
+    display: inline-block;
     text-align: center; /* Center align text */
     border: 0.05vw solid white; /* 1px solid white */
     border-radius: 5%; /* Rounded corners */
     padding: 0.26vw; /* 5px */
 }
 
-.perkName {
-    font-size: 0.52vw; /* 1rem */
+.perk-option:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on hover */
 }
 
+/* Initially hide the description */
 .perkDescription {
-    display: none; /* Hide description initially */
+    display: none;
+    position: absolute;
+    top: 100%; /* Place it below the perk image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: white;
+    padding: 0.52vw; /* Padding inside the pop-out */
+    border-radius: 0.42vw; /* Rounded corners */
+    font-size: 0.52vw; /* Font size */
+    max-width: 20vw; /* Set max width for the description box */
+    width: 100%;
+    white-space: normal; /* Allow text to wrap */
+    z-index: 1000; /* Ensure it appears above other elements */
+    pointer-events: none; /* Disable pointer events for the box */
 }
+
+/* Show description on hover */
+.perk-option:hover .perkDescription {
+    display: block; /* Make the description visible on hover */
+}
+
+/* Add an optional arrow pointing to the perk */
+.perkDescription::before {
+    content: "";
+    position: absolute;
+    top: -0.42vw; /* Adjust the arrow position */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0.42vw; /* Adjust the size of the arrow */
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.9) transparent; /* Arrow color matches background */
+}
+
+
 
 /* General styles for skill menu */
 .skill-menu {
@@ -541,7 +585,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.9); /* Keep same background color as perk menu */
+    background-color: rgba(0, 0, 0, 0.9); /* Same background color as perk menu */
     padding: 1.04vw; /* 20px */
     border-radius: 0.42vw; /* 8px */
     display: flex;
@@ -556,7 +600,9 @@
 
 /* Style for each skill option */
 .skill-option {
+    position: relative; /* Make it a reference point for the pop-out */
     display: flex; /* Use flexbox for layout */
+    flex-direction: column;
     align-items: center; /* Center items vertically */
     cursor: pointer; /* Change cursor to pointer on hover */
     border: 0.05vw solid white; /* 1px solid white */
@@ -573,22 +619,52 @@
 
 /* Style for skill images */
 .skill-option img {
-    width: 2.6vw; /* 50px */
-    height: 2.6vw; /* 50px */
+    width: 5vw; /* 50px */
+    height: 5vw; /* 50px */
     cursor: pointer; /* Pointer cursor on hover */
 }
 
 /* Style for skill names */
 .skillName {
-    font-size: 0.36vw; /* 0.7rem */
+    font-size: 0.5vw; /* 0.7rem */
 }
 
-/* Style for skill descriptions */
+/* Style for skill descriptions with text wrapping */
 .skillDescription {
-    font-size: 0.36vw; /* 0.7rem */
-    color: #ffffff; /* White color for descriptions */
-    display: none; /* Hide description initially */
+    position: absolute;
+    top: 100%; /* Place it below the skill option */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: #ffffff; /* White text color */
+    padding: 0.52vw; /* Padding inside the pop-out */
+    border-radius: 0.42vw; /* Rounded corners */
+    font-size: 0.5vw; /* Font size */
+    max-width: 15vw; /* Set max width for text wrapping */
+    width: 100%; /* Allow the width to automatically adjust */
+    white-space: normal; /* Enable text wrapping */
+    display: none; /* Hide description by default */
+    z-index: 1000; /* Ensure it appears above other elements */
+    pointer-events: none; /* Disable pointer events */
 }
+
+/* Show description on hover */
+.skill-option:hover .skillDescription {
+    display: block; /* Show the description on hover */
+}
+
+/* Optional arrow for description pop-out */
+.skillDescription::before {
+    content: "";
+    position: absolute;
+    top: -0.42vw; /* Position arrow above the description */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0.42vw;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.9) transparent; /* Match background color */
+}
+
 
 /* Optional: Hide the menu when clicking outside */
 .hidden {
