@@ -1479,10 +1479,10 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedPerks.clear(); // Clear the set of selected perks
         selectedSkills.clear(); // Clear the set of selected skills
         perkSlots.forEach(slot => {
-            slot.src = 'img/inventory/perkSlot.webp'; // Reset each perk slot to default
+            slot.src = 'img/inventory/blank.png'; // Reset each perk slot to default
         });
         skillSlots.forEach(slot => {
-            slot.src = 'img/inventory/skillSlot.webp'; // Reset each skill slot to default
+            slot.src = 'img/inventory/blank.png'; // Reset each skill slot to default
         });
     }
 
