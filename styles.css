@@ -522,7 +522,7 @@
 
 
 .perkName {
-    font-size: 0.52vw; /* 1rem */
+    font-size: 1vw; /* 1rem */
 }
 
 
@@ -552,7 +552,7 @@
     color: white;
     padding: 0.52vw; /* Padding inside the pop-out */
     border-radius: 0.42vw; /* Rounded corners */
-    font-size: 0.52vw; /* Font size */
+    font-size: 1vw; /* Font size */
     max-width: 20vw; /* Set max width for the description box */
     width: 100%;
     white-space: normal; /* Allow text to wrap */
@@ -626,7 +626,7 @@
 
 /* Style for skill names */
 .skillName {
-    font-size: 0.5vw; /* 0.7rem */
+    font-size: 1vw; /* 0.7rem */
 }
 
 /* Style for skill descriptions with text wrapping */
@@ -639,7 +639,7 @@
     color: #ffffff; /* White text color */
     padding: 0.52vw; /* Padding inside the pop-out */
     border-radius: 0.42vw; /* Rounded corners */
-    font-size: 0.5vw; /* Font size */
+    font-size: 1vw; /* Font size */
     max-width: 15vw; /* Set max width for text wrapping */
     width: 100%; /* Allow the width to automatically adjust */
     white-space: normal; /* Enable text wrapping */
@@ -670,3 +670,4 @@
 .hidden {
     display: none; /* Ensures the menu is not displayed */
 }
+
