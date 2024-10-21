@@ -158,6 +158,7 @@
 .legs,
 .feet {
     cursor: pointer;
+    border: 2px red solid;
 }
 
 .perk-1-outline {
@@ -181,49 +182,55 @@
 }
 
 .perk-1 {
-    top: 44%;
-    left: -0.7vw; /* -5.5px */
-    width: 20%;
+    top: 11.4vw;
+    left: -0.77vw;
+    width: 4.5vw;
+    height: 4.5vw;
 }
 
 .perk-2 {
-    top: 42%;
-    right: -0.7vw; /* -5.5px */
-    width: 20%;
+    top: 10.9vw;
+    right: -0.77vw;
+    width: 4.5vw;
+    height: 4.5vw;
 }
 
 .perk-3 {
     top: 66%;
-    left: -0.7vw; /* -5.5px */
-    width: 20%;
+    left: -0.77vw;
+    width: 4.5vw;
+    height: 4.5vw;
 }
 
 .perk-4 {
     top: 66%;
-    right: -0.7vw; /* -5.5px */
-    width: 20%;
+    right: -0.77vw;
+    width: 4.5vw;
+    height: 4.5vw;
 }
 
 .skill-1-outline {
-    bottom: -1.9vw; /* -20px */
-    left: -1.24vw; /* -5.5px */
+    bottom: -1.9vw;
+    left: -1.24vw;
 }
 
 .skill-2-outline {
-    bottom: -1.9vw; /* -20px */
-    right: -1.24vw; /* -5.5px */
+    bottom: -1.9vw;
+    right: -1.24vw;
 }
 
 .skill-1 {
-    bottom: -1.35vw; /* -5.5px */
-    left: -0.7vw; /* -5.5px */
-    width: 20%;
+    bottom: -0.7vw;
+    left: -0.05vw;
+    width: 3vw;
+    height: 3vw;
 }
 
 .skill-2 {
-    bottom: -1.35vw; /* -5.5px */
-    right: -0.7vw; /* -5.5px */
-    width: 20%;
+    bottom: -0.7vw;
+    right: -0.05vw;
+    width: 3vw;
+    height: 3vw;
 }
 
 .classTable {
@@ -267,46 +274,46 @@
     transform: scaleX(-1);
 }
 
-.weapon-1 {
+.weapon-1-background {
     width: 7.71vw; /* 148px */
     height: 10.42vw; /* 200px */
-    top: 0;
+    top: 0vw;
     left: -3.5vw; /* -5rem */
 }
 
 .weapon-1-primary {
-    width: 3.39vw; /* 65px */
-    height: 8.59vw; /* 165px */
-    top: 0.89vw; /* 1.7rem */
-    left: -2.34vw; /* -4.5rem */
+    width: 3vw;
+    height: 8vw;
+    top: 1.64vw;
+    left: -2.95vw;
 }
 
 .weapon-1-secondary {
-    width: 3.39vw; /* 65px */
-    height: 8.59vw; /* 165px */
-    top: 0.89vw; /* 1.7rem */
-    left: -0.16vw; /* -0.3rem */
+    width: 3vw;
+    height: 8vw;
+    top: 1.64vw;
+    left: 0.5vw;
 }
 
-.weapon-2 {
+.weapon-2-background {
     width: 7.71vw; /* 148px */
     height: 10.42vw; /* 200px */
-    top: 0;
+    top: 0vw;
     right: -3.5vw; /* -5rem */
 }
 
 .weapon-2-primary {
-    width: 3.39vw; /* 65px */
-    height: 8.59vw; /* 165px */
-    top: 0.89vw; /* 1.7rem */
-    right: -2.34vw; /* -4.5rem */
+    width: 3vw;
+    height: 8vw;
+    top: 1.64vw;
+    right: 0.5vw;
 }
 
 .weapon-2-secondary {
-    width: 3.39vw; /* 65px */
-    height: 8.59vw; /* 165px */
-    top: 0.89vw; /* 1.7rem */
-    right: -0.16vw; /* -0.3rem */
+    width: 3vw;
+    height: 8vw;
+    top: 1.64vw;
+    right: -2.95vw;
 }
 
 .utility-1-background {
@@ -317,21 +324,24 @@
 }
 
 .utility-1 {
-    width: 3.02vw; /* 58px */
-    top: 10.57vw; /* 20.3rem */
-    left: -2.34vw; /* -4.5rem */
+    width: 3vw;
+    height: 3vw;
+    top: 16.75vw;
+    left: -3.15vw;
 }
 
 .utility-2 {
-    width: 3.02vw; /* 58px */
-    top: 12.71vw; /* 24.4rem */
-    left: -2.34vw; /* -4.5rem */
+    width: 3vw;
+    height: 3vw;
+    top: 20.15vw;
+    left: -3.15vw;
 }
 
 .utility-3 {
-    width: 3.02vw; /* 58px */
-    top: 14.84vw; /* 28.5rem */
-    left: -2.34vw; /* -4.5rem */
+    width: 3vw;
+    height: 3vw;
+    top: 23.55vw;
+    left: -3.15vw;
 }
 
 .utility-2-background {
@@ -341,114 +351,145 @@
     right: -3.5vw; /* -5rem */
 }
 
-.utility-3-background {
-    width: 3.85vw; /* 74px */
-    height: 15.63vw; /* 300px */
-    top: 7.24vw; /* 13.9rem */
-    right: -2.6vw; /* -5rem */
-}
-
-.utility-4-background {
-    width: 3.85vw; /* 74px */
-    height: 15.63vw; /* 300px */
-    top: 7.24vw; /* 13.9rem */
-    right: -2.6vw; /* -5rem */
-}
-
-.utility-5-background {
-    width: 3.85vw; /* 74px */
-    height: 15.63vw; /* 300px */
-    top: 7.24vw; /* 13.9rem */
-    right: -2.6vw; /* -5rem */
-}
-
-.utility-6-background {
-    width: 3.85vw; /* 74px */
-    height: 15.63vw; /* 300px */
-    top: 7.24vw; /* 13.9rem */
-    right: -2.6vw; /* -5rem */
-}
-
-.utility-6 {
-    width: 3.02vw; /* 58px */
-    top: 14.84vw; /* 28.5rem */
-    right: -2.34vw; /* -4.5rem */
+.utility-4 {
+    width: 3vw;
+    height: 3vw;
+    top: 16.75vw;
+    right: -3.15vw;
 }
 
 .utility-5 {
-    width: 3.02vw; /* 58px */
-    top: 12.71vw; /* 24.4rem */
-    right: -2.34vw; /* -4.5rem */
+    width: 3vw;
+    height: 3vw;
+    top: 20.15vw;
+    right: -3.15vw;
 }
 
-.utility-4 {
-    width: 3.02vw; /* 58px */
-    top: 10.57vw; /* 20.3rem */
-    right: -2.34vw; /* -4.5rem */
+.utility-6 {
+    width: 3vw;
+    height: 3vw;
+    top: 23.55vw;
+    right: -3.15vw;
 }
 
-.head {
+.head-background {
     width: 4vw; /* 150px */
     height: 4vw; /* 150px */
     top: 3vw; /* 100px */
 }
 
-.neck {
+.neck-background {
     width: 3vw; /* 100px */
     height: 3vw; /* 100px */
     top: 4.05vw; /* 260px */
     right: 5.5vw;
 }
 
-.back {
+.back-background {
     width: 4vw; /* 160px */
     height: 4vw; /* 160px */
     top: 10.5vw; /* 300px */
     right: 4vw;
 }
 
-.chest {
+.chest-background {
     width: 5vw; /* 140px */
     height: 7vw; /* 140px */
     top: 7.5vw; /* 370px */
 }
 
-.hands {
+.hands-background {
     width: 4vw; /* 100px */
     height: 4vw; /* 100px */
     top: 10.5vw; /* 480px */
     left: 4vw;
 }
 
-.ring-1 {
+.ring-1-background {
     width: 3vw; /* 100px */
     height: 3vw; /* 100px */
     top: 14.95vw; /* 570px */
     left: 5vw;
 }
 
-.ring-2 {
+.ring-2-background {
     width: 3vw; /* 100px */
     height: 3vw; /* 100px */
     top: 14.95vw; /* 570px */
     right: 5vw;
 }
 
-.legs {
+.legs-background {
     width: 5vw; /* 150px */
     height: 7vw; /* 150px */
     top: 15vw; /* 650px */
 }
 
-.feet {
+.feet-background {
     width: 4vw; /* 150px */
     height: 4vw; /* 150px */
     top: 18vw; /* 800px */
     right: 4vw;
 }
 
-.invisible {
-    visibility: visible;
+.head {
+    width: 3vw;
+    height: 3vw;
+    top: 3.4vw;
+}
+
+.neck {
+    width: 2vw;
+    height: 2vw;
+    top: 4.47vw;
+    right: 5.9vw;
+}
+
+.back {
+    width: 3vw;
+    height: 3vw;
+    top: 10.9vw;
+    right: 4.45vw;
+}
+
+.chest {
+    width: 4vw;
+    height: 6vw;
+    top: 7.95vw;
+}
+
+.hands {
+    width: 3vw;
+    height: 3vw;
+    top: 10.9vw;
+    left: 4.45vw;
+}
+
+.ring-1 {
+    width: 2vw;
+    height: 2vw;
+    top: 15.37vw;
+    left: 5.44vw;
+}
+
+.ring-2 {
+    width: 2vw;
+    height: 2vw;
+    top: 15.37vw;
+    right: 5.44vw;
+}
+
+.legs {
+    width: 4vw; /* 150px */
+    height: 6vw; /* 150px */
+    top: 15.4vw; /* 650px */
+}
+
+.feet {
+    width: 3vw; /* 150px */
+    height: 3vw; /* 150px */
+    top: 18.45vw; /* 800px */
+    right: 4.45vw;
 }
 
 .mt-1 { margin-top: 0.52vw; /* 1rem */ }

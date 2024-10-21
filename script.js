@@ -1023,10 +1023,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             skill: 'BloodExchange',
-            imgSrc: 'img/skill/barbarian/Skill_AchillesStrike.png',
-            alt: 'Achilles Strike',
+            imgSrc: 'img/skill/barbarian/Skill_BloodExchange.png',
+            alt: 'Blood Exchange',
             class: 'barbarian',
-            name: 'Achilles Strike',
+            name: 'Blood Exchange',
             description: 'For 8s, receive 10% Percent Max Health Healing with each successful attack. In exchange, suffer -20% Max Health Bonus for the duration. Has 1 use. Can be Recharged at the rate of a Tier 5 Spell by sitting at a Campfire.'
         },
         {
@@ -1644,7 +1644,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (activePerkSlot) {
                 if (selectedPerk === 'none') {
                     selectedPerks.delete(activePerkSlot.src.split('/').pop().split('.png')[0]); // Remove old perk
-                    activePerkSlot.src = `img/inventory/perkSlot.webp`; // Reset slot
+                    activePerkSlot.src = `img/inventory/blank.png`; // Reset slot
                 } else if (!selectedPerks.has(selectedPerk)) {
                     selectedPerks.delete(activePerkSlot.src.split('/').pop().split('.png')[0]); // Remove old perk
                     selectedPerks.add(selectedPerk);
@@ -1670,7 +1670,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 if (selectedSkill === 'none') {
-                    activeSkillSlot.src = `img/inventory/skillSlot.webp`; // Reset to default slot image
+                    activeSkillSlot.src = `img/inventory/blank.png`; // Reset to default slot image
                     activeSkillSlot.setAttribute('data-skill', 'none'); // Reset the slot's data-skill attribute
                 } else if (!selectedSkills.has(selectedSkill)) {
                     selectedSkills.add(selectedSkill); // Add new skill to the selected set
