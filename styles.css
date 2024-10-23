@@ -5,7 +5,7 @@
 
 .header {
     text-align: center;
-    font-size: 1vw;
+    font-size: 2vw;
 }
 
 .main {
@@ -43,7 +43,7 @@
 }
 
 .classContainer {
-    width: 3.65vw; /* 70px */
+    width: 5vw; /* 70px */
     text-align: center;
     cursor: pointer;
     transition: transform 0.2s;
@@ -70,7 +70,7 @@
 
 .className {
     margin-top: 0.26vw; /* 5px */
-    font-size: 0.83vw; /* 16px */
+    font-size: 1vw; /* 16px */
 }
 
 .classHover {
@@ -99,13 +99,13 @@
 .inventoryColumns {
     margin: 0.52vw; /* 10px */
     padding: 1.04vw; /* 20px */
-    width: 22vw;
+    width: 26vw;
 }
 
 .container {
     position: relative;
     width: 100%;
-    height: 26.04vw; /* 500px */
+    height: 35vw; /* 500px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +115,7 @@
 
 .overlay-image {
     position: absolute;
-    width: 5.5vw;
+    width: 7vw;
     height: auto;
 }
 
@@ -127,8 +127,8 @@
 .portrait {
     width: 100%;
     height: auto;
-    max-width: 15.6vw; /* 300px */
-    max-height: 15.6vw; /* 300px */
+    max-width: 20vw; /* 300px */
+    max-height: 20vw; /* 300px */
     object-fit: contain;
 }
 
@@ -158,78 +158,79 @@
 .legs,
 .feet {
     cursor: pointer;
+    border: red 2px solid;
 }
 
 .perk-1-outline {
-    top: 42%;
-    left: -1.24vw; /* -5.5px */
+    bottom: 14vw;
+    left: -1.75vw; /* -5.5px */
 }
 
 .perk-2-outline {
-    top: 40%;
-    right: -1.24vw; /* -5.5px */
+    bottom: 14vw;
+    right: -1.75vw; /* -5.5px */
 }
 
 .perk-3-outline {
-    top: 64%;
-    left: -1.24vw; /* -5.5px */
+    bottom: 6vw;
+    left: -1.75vw; /* -5.5px */
 }
 
 .perk-4-outline {
-    top: 64%;
-    right: -1.24vw; /* -5.5px */
+    bottom: 6vw;
+    right: -1.75vw; /* -5.5px */
 }
 
 .perk-1 {
-    top: 11.4vw;
-    left: -0.77vw;
-    width: 4.5vw;
-    height: 4.5vw;
+    bottom: 14.75vw;
+    left: -1vw;
+    width: 5.5vw;
+    height: 5.5vw;
 }
 
 .perk-2 {
-    top: 10.9vw;
-    right: -0.77vw;
-    width: 4.5vw;
-    height: 4.5vw;
+    bottom: 14.75vw;
+    right: -1vw;
+    width: 5.5vw;
+    height: 5.5vw;
 }
 
 .perk-3 {
-    top: 66%;
-    left: -0.77vw;
-    width: 4.5vw;
-    height: 4.5vw;
+    bottom: 6.75vw;
+    left: -1vw;
+    width: 5.5vw;
+    height: 5.5vw;
 }
 
 .perk-4 {
-    top: 66%;
-    right: -0.77vw;
-    width: 4.5vw;
-    height: 4.5vw;
+    bottom: 6.75vw;
+    right: -1vw;
+    width: 5.5vw;
+    height: 5.5vw;
 }
 
 .skill-1-outline {
-    bottom: -1.9vw;
-    left: -1.24vw;
+    bottom: -2.3vw;
+    left: -1.75vw;
 }
 
 .skill-2-outline {
-    bottom: -1.9vw;
-    right: -1.24vw;
+    bottom: -2.3vw;
+    right: -1.75vw;
 }
 
 .skill-1 {
-    bottom: -0.7vw;
-    left: -0.05vw;
-    width: 3vw;
-    height: 3vw;
+    bottom: -0.8vw;
+    left: -0.2vw;
+    width: 4vw;
+    height: 4vw;
 }
 
 .skill-2 {
-    bottom: -0.7vw;
-    right: -0.05vw;
-    width: 3vw;
-    height: 3vw;
+    bottom: -0.8vw;
+    right: -0.3vw;
+    width: 4vw;
+    height: 4vw;
 }
 
 .classTable {
@@ -256,28 +257,28 @@
 }
 
 .background-shadow {
-    width: 25.47vw; /* 489px */
-    height: 28.23vw; /* 542px */
+    width: 33vw; /* 489px */
+    height: 36vw; /* 542px */
 }
 
 .background-left {
-    height: 27.19vw; /* 522px */
-    width: 10.57vw; /* 203px */
+    height: 33vw; /* 522px */
+    width: 10.5vw; /* 203px */
     left: 1vw;
 }
 
 .background-right {
-    height: 27.19vw; /* 522px */
-    width: 10.57vw; /* 203px */
+    height: 33vw;
+    width: 10.5vw;
     right: 1vw;
     transform: scaleX(-1);
 }
 
 .weapon-1-background {
-    width: 7.71vw; /* 148px */
-    height: 10.42vw; /* 200px */
+    width: 9vw;
+    height: 12vw;
     top: 0vw;
-    left: -3.5vw; /* -5rem */
+    left: -4.5vw;
 }
 
 .weapon-1-primary {
@@ -295,10 +296,10 @@
 }
 
 .weapon-2-background {
-    width: 7.71vw; /* 148px */
-    height: 10.42vw; /* 200px */
+    width: 9vw;
+    height: 12vw;
     top: 0vw;
-    right: -3.5vw; /* -5rem */
+    right: -4.5vw;
 }
 
 .weapon-2-primary {
@@ -316,10 +317,10 @@
 }
 
 .utility-1-background {
-    width: 3.85vw; /* 74px */
-    height: 15.63vw; /* 300px */
-    top: 11.5vw; /* 13.9rem */
-    left: -3.5vw; /* -5rem */
+    width: 5vw;
+    height: 20vw;
+    top: 13vw;
+    left: -4.5vw;
 }
 
 .utility-1 {
@@ -344,10 +345,10 @@
 }
 
 .utility-2-background {
-    width: 3.85vw; /* 74px */
-    height: 15.63vw; /* 300px */
-    top: 11.5vw; /* 13.9rem */
-    right: -3.5vw; /* -5rem */
+    width: 5vw;
+    height: 20vw;
+    top: 13vw;
+    right: -4.5vw;
 }
 
 .utility-4 {
@@ -372,63 +373,63 @@
 }
 
 .head-background {
-    width: 4vw; /* 150px */
-    height: 4vw; /* 150px */
-    top: 3vw; /* 100px */
+    width: 5.5vw;
+    height: 5.5vw;
+    top: 3.5vw;
 }
 
 .neck-background {
-    width: 3vw; /* 100px */
-    height: 3vw; /* 100px */
-    top: 4.05vw; /* 260px */
+    width: 4vw;
+    height: 4vw;
+    top: 5.05vw;
     right: 5.5vw;
 }
 
 .back-background {
-    width: 4vw; /* 160px */
-    height: 4vw; /* 160px */
-    top: 10.5vw; /* 300px */
-    right: 4vw;
+    width: 5.5vw; /* 160px */
+    height: 5.5vw; /* 160px */
+    top: 13vw; /* 300px */
+    right: 3.5vw;
 }
 
 .chest-background {
-    width: 5vw; /* 140px */
-    height: 7vw; /* 140px */
-    top: 7.5vw; /* 370px */
+    width: 7vw; /* 140px */
+    height: 9vw; /* 140px */
+    top: 9.5vw; /* 370px */
 }
 
 .hands-background {
-    width: 4vw; /* 100px */
-    height: 4vw; /* 100px */
-    top: 10.5vw; /* 480px */
-    left: 4vw;
+    width: 5.5vw; /* 100px */
+    height: 5.5vw; /* 100px */
+    top: 13vw; /* 480px */
+    left: 3.5vw;
 }
 
 .ring-1-background {
-    width: 3vw; /* 100px */
-    height: 3vw; /* 100px */
-    top: 14.95vw; /* 570px */
-    left: 5vw;
+    width: 3.5vw; /* 100px */
+    height: 3.5vw; /* 100px */
+    top: 19.1vw; /* 570px */
+    left: 5.4vw;
 }
 
 .ring-2-background {
-    width: 3vw; /* 100px */
-    height: 3vw; /* 100px */
-    top: 14.95vw; /* 570px */
-    right: 5vw;
+    width: 3.5vw; /* 100px */
+    height: 3.5vw; /* 100px */
+    top: 19.1vw; /* 570px */
+    right: 5.4vw;
 }
 
 .legs-background {
-    width: 5vw; /* 150px */
-    height: 7vw; /* 150px */
-    top: 15vw; /* 650px */
+    width: 7vw; /* 150px */
+    height: 9vw; /* 150px */
+    top: 19.1vw; /* 650px */
 }
 
 .feet-background {
-    width: 4vw; /* 150px */
-    height: 4vw; /* 150px */
-    top: 18vw; /* 800px */
-    right: 4vw;
+    width: 5.5vw; /* 150px */
+    height: 5.5vw; /* 150px */
+    top: 22.6vw; /* 800px */
+    right: 3.4vw;
 }
 
 .head {
