@@ -158,7 +158,7 @@
 .legs,
 .feet {
     cursor: pointer;
-    border: red 2px solid;
+    
 }
 
 .perk-1-outline {
@@ -282,10 +282,10 @@
 }
 
 .weapon-1-primary {
-    width: 3vw;
-    height: 8vw;
-    top: 1.64vw;
-    left: -2.95vw;
+    width: 3.6vw;
+    height: 9.3vw;
+    top: 1.9vw;
+    left: -3.75vw;
 }
 
 .weapon-1-secondary {
