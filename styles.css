@@ -158,7 +158,7 @@
 .legs,
 .feet {
     cursor: pointer;
-    
+    border: red 2px solid;
 }
 
 .perk-1-outline {
@@ -289,10 +289,10 @@
 }
 
 .weapon-1-secondary {
-    width: 3vw;
-    height: 8vw;
-    top: 1.64vw;
-    left: 0.5vw;
+    width: 3.6vw;
+    height: 9.3vw;
+    top: 1.9vw;
+    left: 0;
 }
 
 .weapon-2-background {
@@ -303,17 +303,17 @@
 }
 
 .weapon-2-primary {
-    width: 3vw;
-    height: 8vw;
-    top: 1.64vw;
-    right: 0.5vw;
+    width: 3.6vw;
+    height: 9.3vw;
+    top: 1.9vw;
+    right: 0;
 }
 
 .weapon-2-secondary {
-    width: 3vw;
-    height: 8vw;
-    top: 1.64vw;
-    right: -2.95vw;
+    width: 3.6vw;
+    height: 9.3vw;
+    top: 1.9vw;
+    right: -3.75vw;
 }
 
 .utility-1-background {
@@ -324,24 +324,24 @@
 }
 
 .utility-1 {
-    width: 3vw;
-    height: 3vw;
-    top: 16.75vw;
-    left: -3.15vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    top: 19.95vw;
+    left: -3.8vw;
 }
 
 .utility-2 {
-    width: 3vw;
-    height: 3vw;
-    top: 20.15vw;
-    left: -3.15vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    top: 24.3vw;
+    left: -3.8vw;
 }
 
 .utility-3 {
-    width: 3vw;
-    height: 3vw;
-    top: 23.55vw;
-    left: -3.15vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    top: 28.6vw;
+    left: -3.8vw;
 }
 
 .utility-2-background {
@@ -352,24 +352,24 @@
 }
 
 .utility-4 {
-    width: 3vw;
-    height: 3vw;
-    top: 16.75vw;
-    right: -3.15vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    top: 19.95vw;
+    right: -3.8vw;
 }
 
 .utility-5 {
-    width: 3vw;
-    height: 3vw;
-    top: 20.15vw;
-    right: -3.15vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    top: 24.3vw;
+    right: -3.8vw;
 }
 
 .utility-6 {
-    width: 3vw;
-    height: 3vw;
-    top: 23.55vw;
-    right: -3.15vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    top: 28.6vw;
+    right: -3.8vw;
 }
 
 .head-background {
@@ -379,10 +379,10 @@
 }
 
 .neck-background {
-    width: 4vw;
-    height: 4vw;
-    top: 5.05vw;
-    right: 5.5vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    top: 5.55vw;
+    right: 6.2vw;
 }
 
 .back-background {
@@ -406,8 +406,8 @@
 }
 
 .ring-1-background {
-    width: 3.5vw; /* 100px */
-    height: 3.5vw; /* 100px */
+    width: 3.5vw;
+    height: 3.5vw;
     top: 19.1vw; /* 570px */
     left: 5.4vw;
 }
@@ -433,63 +433,63 @@
 }
 
 .head {
-    width: 3vw;
-    height: 3vw;
-    top: 3.4vw;
+    width: 4vw;
+    height: 4vw;
+    top: 4.2vw;
 }
 
 .neck {
-    width: 2vw;
-    height: 2vw;
-    top: 4.47vw;
-    right: 5.9vw;
+    width: 1.9vw;
+    height: 1.9vw;
+    top: 6.3vw;
+    right: 6.95vw;
 }
 
 .back {
-    width: 3vw;
-    height: 3vw;
-    top: 10.9vw;
-    right: 4.45vw;
+    width: 4vw;
+    height: 4vw;
+    top: 13.7vw;
+    right: 4.2vw;
 }
 
 .chest {
-    width: 4vw;
-    height: 6vw;
-    top: 7.95vw;
+    width: 5.5vw;
+    height: 7.5vw;
+    top: 10.2vw;
 }
 
 .hands {
-    width: 3vw;
-    height: 3vw;
-    top: 10.9vw;
-    left: 4.45vw;
+    width: 4vw;
+    height: 4vw;
+    top: 13.7vw;
+    left: 4.2vw;
 }
 
 .ring-1 {
-    width: 2vw;
-    height: 2vw;
-    top: 15.37vw;
-    left: 5.44vw;
+    width: 1.9vw;
+    height: 1.9vw;
+    top: 19.85vw;
+    left: 6.15vw;
 }
 
 .ring-2 {
-    width: 2vw;
-    height: 2vw;
-    top: 15.37vw;
-    right: 5.44vw;
+    width: 1.9vw;
+    height: 1.9vw;
+    top: 19.85vw;
+    right: 6.1vw;
 }
 
 .legs {
-    width: 4vw; /* 150px */
-    height: 6vw; /* 150px */
-    top: 15.4vw; /* 650px */
+    width: 5.5vw; /* 150px */
+    height: 7.5vw; /* 150px */
+    top: 19.8vw; /* 650px */
 }
 
 .feet {
-    width: 3vw; /* 150px */
-    height: 3vw; /* 150px */
-    top: 18.45vw; /* 800px */
-    right: 4.45vw;
+    width: 4vw; /* 150px */
+    height: 4vw; /* 150px */
+    top: 23.3vw; /* 800px */
+    right: 4.05vw;
 }
 
 .mt-1 { margin-top: 0.52vw; /* 1rem */ }
