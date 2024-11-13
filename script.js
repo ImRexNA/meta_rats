@@ -1705,5 +1705,35 @@ document.addEventListener('DOMContentLoaded', () => {
             updatePerkOptions(); // Update perks
         });
     });
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
       
 });

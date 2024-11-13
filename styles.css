@@ -158,7 +158,7 @@
 .legs,
 .feet {
     cursor: pointer;
-    border: red 2px solid;
+    border: red 1px solid;
 }
 
 .perk-1-outline {
@@ -182,29 +182,29 @@
 }
 
 .perk-1 {
-    bottom: 14.75vw;
-    left: -1vw;
+    bottom: 14.65vw;
+    left: -1.1vw;
     width: 5.5vw;
     height: 5.5vw;
 }
 
 .perk-2 {
-    bottom: 14.75vw;
-    right: -1vw;
+    bottom: 14.65vw;
+    right: -1.1vw;
     width: 5.5vw;
     height: 5.5vw;
 }
 
 .perk-3 {
-    bottom: 6.75vw;
-    left: -1vw;
+    bottom: 6.65vw;
+    left: -1.1vw;
     width: 5.5vw;
     height: 5.5vw;
 }
 
 .perk-4 {
-    bottom: 6.75vw;
-    right: -1vw;
+    bottom: 6.65vw;
+    right: -1.1vw;
     width: 5.5vw;
     height: 5.5vw;
 }
@@ -671,4 +671,10 @@
 .hidden {
     display: none; /* Ensures the menu is not displayed */
 }
+
+
+
+
+
+
 
