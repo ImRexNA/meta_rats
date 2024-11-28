@@ -4,19 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const portraitImage = document.querySelector('.overlay-image.portrait');
     const perkMenu = document.createElement('div');
     const skillMenu = document.createElement('div'); // Create skill menu
+    const itemMenu = document.createElement('div');
     perkMenu.classList.add('perk-menu', 'hidden');
     skillMenu.classList.add('skill-menu', 'hidden'); // Add class for skill menu
+    itemMenu.classList.add('item-menu', 'hidden');
     document.body.appendChild(perkMenu);
     document.body.appendChild(skillMenu); // Append skill menu to body
+    document.body.appendChild(itemMenu);
     const perkSlots = document.querySelectorAll('.overlay-image[data-perk-slot]');
     const skillSlots = document.querySelectorAll('.overlay-image[data-skill-slot]'); // Skill slots
+    const itemSlots = document.querySelectorAll('.overlay-image[data-item-slot]');
     let activePerkSlot = null;
     let activeSkillSlot = null; // For active skill slot
+    let activeItemSlot = null;
     let selectedClass = 'barbarian'; // Default selected class
 
     // Set to store selected perks and skills
     const selectedPerks = new Set();
     const selectedSkills = new Set(); // Track selected skills
+    const selectedItems = new Set();
 
     // Class data for stats and portraits
     const classData = {
@@ -1475,14 +1481,18 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // Function to clear selected perks and skills
-    function clearSelectedPerksAndSkills() {
+    function clearSelected() {
         selectedPerks.clear(); // Clear the set of selected perks
         selectedSkills.clear(); // Clear the set of selected skills
+        selectedItems.clear();
         perkSlots.forEach(slot => {
             slot.src = 'img/inventory/blank.png'; // Reset each perk slot to default
         });
         skillSlots.forEach(slot => {
             slot.src = 'img/inventory/blank.png'; // Reset each skill slot to default
+        });
+        itemSlots.forEach(slot => {
+            slot.src = 'img/inventory/blank.png';
         });
     }
 
@@ -1545,6 +1555,75 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     
+
+    //===============================
+
+    const itemsData = [
+        {
+            item: 'none',
+            imgSrc: 'img/inventory/skillSlot.webp',
+            alt: 'No Skill',
+            class: 'all'
+        }
+    ];
+
+    //Function to update the visibility of item options
+    function updateItemOptions() {
+        const itemOptions = document.querySelectorAll('.item-option');
+        itemOptions.forEach(option => {
+            const itemClass = option.getAttribute('data-class');
+            if (selectedItem.has(option.getAttribute('data-item')) && option.getAttribute('data-item') !== 'none') {
+                option.style.display = 'none';
+            } else  if (itemClass === selectedClass || itemClass === 'all') {
+                option.style.display = '';
+            } else {
+                option.style.display = 'none';
+            }
+        });
+    }
+
+    function generateItemOptions() {
+        itemMenu.innerHTML = '';
+        itemsData.forEach(item => {
+            const itemOption = document.createElement('div');
+            itemOption.classList.add('item-option');
+            itemOption.setAttribute('data-item', item.item);
+            itemOption.setAttribute('data-class', item.class);
+
+            const img = document.createElement('img');
+            img.src = item.imgSrc;
+            img.alt = item.alt;
+
+            itemOption.appendChild(img);
+
+            if (item.name && item.description) {
+                const itemName = document.createElement('div');
+                itemName.classList.add('itemName');
+                itemName.textContent = item.name;
+
+                itemOption.appendChild(itemName);
+            }
+            itemMenu.appendChild(itemOption);
+        });
+    }
+
+    generateItemOptions();
+
+    itemSlots.forEach(slot => {
+        slot.addEventListener('click', () => {
+            activeItemSlot = slot;
+            itemMenu.classList.remove('hidden');
+            updateItemOptions();
+        });
+    });
+
+    
+
+    //================================
+
+
+
+
 
     // Function to generate perk options dynamically
     function generatePerkOptions() {
@@ -1684,7 +1763,37 @@ document.addEventListener('DOMContentLoaded', () => {
             skillMenu.classList.add('hidden'); // Hide the skill menu
         }
 
+        //==============================================================
 
+        // Event listeners for item options
+        if (event.target.closest('.item-option')) {
+            const option = event.target.closest('.item-option');
+            const selectedItem = option.getAttribute('data-item');
+
+            if (activeItemSlot) {
+                const currentItem = activeItemSlot.getAttribute('data-item'); // Get the current skill in the slot
+
+                // Remove the current skill from the selected set (if any)
+                if (currentItem && currentItem !== 'none') {
+                    selectedItems.delete(currentItem);
+                }
+
+                if (selectedItem === 'none') {
+                    activeItemSlot.src = `img/inventory/blank.png`; // Reset to default slot image
+                    activeItemSlot.setAttribute('data-item', 'none'); // Reset the slot's data-skill attribute
+                } else if (!selectedItems.has(selectedItem)) {
+                    selectedItems.add(selectedItem); // Add new skill to the selected set
+                    activeItemSlot.src = option.querySelector('img').src; // Set the new skill image in the slot
+                    activeItemSlot.setAttribute('data-item', selectedItem); // Store the selected skill in the slot
+                }
+
+                updateItemOptions(); // Update skill options visibility
+            }
+
+            itemMenu.classList.add('hidden'); // Hide the skill menu
+        }
+
+        //==============================================================
 
         // Hide menus if clicked outside
         if (!event.target.closest('.perk-menu') && !event.target.closest('.overlay-image[data-perk-slot]')) {
@@ -1693,16 +1802,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!event.target.closest('.skill-menu') && !event.target.closest('.overlay-image[data-skill-slot]')) {
             skillMenu.classList.add('hidden');
         }
+        if (!event.target.closest('.item-menu') && !event.target.closest('.overlay-image[data-item-slot]')) {
+            itemMenu.classList.add('hidden');
+        }
     });
 
     // Event listeners for class selection
     classOptions.forEach(option => {
         option.addEventListener('click', () => {
             selectedClass = option.getAttribute('data-class');
-            clearSelectedPerksAndSkills(); // Clear previous selections
+            clearSelected(); // Clear previous selections
             updateTableAndPortrait(selectedClass); // Update table and portrait
             updateSkillOptions(); // Update skills
             updatePerkOptions(); // Update perks
+            updateItemOptions();
         });
     });
 

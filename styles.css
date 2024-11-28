@@ -667,6 +667,112 @@
 }
 
 
+
+
+
+
+/* General styles for skill menu */
+.item-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Same background color as perk menu */
+    padding: 1.04vw; /* 20px */
+    border-radius: 0.42vw; /* 8px */
+    display: flex;
+    gap: 0.52vw; /* 10px */
+    z-index: 9999;
+}
+
+/* Show skill menu when active */
+.item-menu:not(.hidden) {
+    display: flex; /* Show menu as flex when not hidden */
+}
+
+/* Style for each skill option */
+.item-option {
+    position: relative; /* Make it a reference point for the pop-out */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 0.05vw solid white; /* 1px solid white */
+    border-radius: 5%; /* Rounded corners */
+    padding: 0.26vw; /* 5px */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    text-align: center; /* Center align text */
+}
+
+/* Change background color on hover */
+.item-option:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on hover */
+}
+
+/* Style for skill images */
+.item-option img {
+    width: 5vw; /* 50px */
+    height: 5vw; /* 50px */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Style for skill names */
+.itemName {
+    font-size: 1vw; /* 0.7rem */
+}
+
+/* Style for skill descriptions with text wrapping */
+.itemDescription {
+    position: absolute;
+    top: 100%; /* Place it below the skill option */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: #ffffff; /* White text color */
+    padding: 0.52vw; /* Padding inside the pop-out */
+    border-radius: 0.42vw; /* Rounded corners */
+    font-size: 1vw; /* Font size */
+    max-width: 15vw; /* Set max width for text wrapping */
+    width: 100%; /* Allow the width to automatically adjust */
+    white-space: normal; /* Enable text wrapping */
+    display: none; /* Hide description by default */
+    z-index: 1000; /* Ensure it appears above other elements */
+    pointer-events: none; /* Disable pointer events */
+}
+
+/* Show description on hover */
+.item-option:hover .itemDescription {
+    display: block; /* Show the description on hover */
+}
+
+/* Optional arrow for description pop-out */
+.itemDescription::before {
+    content: "";
+    position: absolute;
+    top: -0.42vw; /* Position arrow above the description */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0.42vw;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.9) transparent; /* Match background color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Optional: Hide the menu when clicking outside */
 .hidden {
     display: none; /* Ensures the menu is not displayed */
