@@ -1652,17 +1652,34 @@ document.addEventListener('DOMContentLoaded', () => {
             item: 'none',
             imgSrc: 'img/inventory/skillSlot.webp',
             alt: 'No Skill',
-            class: 'all'
-        }
+            class: 'all',
+            slots: ['all']
+        },
+        {
+            item: 'armingSword',
+            imgSrc: 'img/items/weapons/Arming_Sword/Arming_Sword_1.png',
+            alt: 'No Skill',
+            class: 'all',
+            slots: ['1']
+        },
     ];
 
     function updateItemOptions() {
         const itemOptions = document.querySelectorAll('.item-option');
+        const activeSlotId = activeItemSlot.getAttribute('data-item-slot');
+    
         itemOptions.forEach(option => {
-            const itemClass = option.getAttribute('data-class');
-            if (selectedItems.has(option.getAttribute('data-item')) && option.getAttribute('data-item') !== 'none') {
+            const itemSlotCompatibility = option.getAttribute('data-slots').split(',');
+    
+            if (
+                selectedItems.has(option.getAttribute('data-item')) &&
+                option.getAttribute('data-item') !== 'none'
+            ) {
                 option.style.display = 'none';
-            } else if (itemClass === selectedClass || itemClass === 'all') {
+            } else if (
+                (option.getAttribute('data-class') === selectedClass || option.getAttribute('data-class') === 'all') &&
+                (itemSlotCompatibility.includes(activeSlotId) || itemSlotCompatibility.includes('all'))
+            ) {
                 option.style.display = '';
             } else {
                 option.style.display = 'none';
@@ -1677,26 +1694,27 @@ document.addEventListener('DOMContentLoaded', () => {
             itemOption.classList.add('item-option');
             itemOption.setAttribute('data-item', item.item);
             itemOption.setAttribute('data-class', item.class);
-
+            itemOption.setAttribute('data-slots', item.slots.join(',')); // Store compatible slots
+    
             const img = document.createElement('img');
             img.src = item.imgSrc;
             img.alt = item.alt;
-
+    
             itemOption.appendChild(img);
-
+    
             if (item.name && item.description) {
                 const itemName = document.createElement('div');
                 itemName.classList.add('itemName');
                 itemName.textContent = item.name;
-
+    
                 const itemDescription = document.createElement('div');
                 itemDescription.classList.add('itemDescription');
                 itemDescription.textContent = item.description;
-
+    
                 itemOption.appendChild(itemName);
                 itemOption.appendChild(itemDescription);
             }
-
+    
             itemMenu.appendChild(itemOption);
         });
     }
@@ -1707,7 +1725,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slot.addEventListener('click', () => {
             activeItemSlot = slot;
             itemMenu.classList.remove('hidden');
-            updateItemOptions();
+            updateItemOptions(); // Update options based on active slot
         });
     });
 
