@@ -1660,7 +1660,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imgSrc: 'img/items/weapons/Arming_Sword/Arming_Sword_1.png',
             alt: 'No Skill',
             class: 'all',
-            slots: ['1']
+            slots: ['all']
         },
     ];
 
